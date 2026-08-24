@@ -12,6 +12,40 @@ Public metadata for Loppee's narrow, no-auth MCP discovery surface.
 Configure the URL above as a remote HTTP MCP server in a compatible client.
 This repository does not contain credentials and does not require an API key.
 
+### Claude custom connector
+
+[Add Loppee to Claude](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Loppee&connectorUrl=https%3A%2F%2Floppee.com%2Fmcp%2Fdiscovery)
+prefills Claude's custom-connector dialog. Claude still asks the signed-in user
+to review and confirm the name and URL; the link does not publish a directory
+listing or grant permissions.
+
+The canary and directory-review packet is in
+[`distribution/claude-connectors-directory.md`](distribution/claude-connectors-directory.md).
+
+### Cursor
+
+Copy the following official Cursor MCP install link into a browser with Cursor
+installed. Cursor shows the decoded remote-server configuration and asks the
+user to confirm before installation:
+
+```text
+cursor://anysphere.cursor-deeplink/mcp/install?name=loppee&config=eyJ1cmwiOiJodHRwczovL2xvcHBlZS5jb20vbWNwL2Rpc2NvdmVyeSJ9
+```
+
+The decoded configuration is exactly:
+
+```json
+{
+  "url": "https://loppee.com/mcp/discovery"
+}
+```
+
+For manual or project setup, use [`mcp.json`](mcp.json). The candidate Cursor
+Marketplace manifest is [`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json).
+Neither file contains an account, header, credential, key, or local command.
+The Marketplace preflight is in
+[`distribution/cursor-marketplace.md`](distribution/cursor-marketplace.md).
+
 ## Public tool boundary
 
 The endpoint exposes exactly five read-only named-business research tools:
@@ -43,18 +77,33 @@ published through this repository.
 
 ## Registry metadata
 
-`server.json` prepares version `0.1.2` of the existing
-`com.loppee/loppee` Official MCP Registry listing. Registry versions are
-immutable after publication. The file is a candidate until the official
-Registry reports version `0.1.2` as active.
+`server.json` records published version `0.1.3` of the existing
+`com.loppee/loppee` Official MCP Registry listing. The Official Registry reports
+it as the only active version, with the `/mcp/discovery` remote, published at
+`2026-08-24T18:33:32.121626Z`. Versions `0.1.0` through `0.1.2` are retained as
+deprecated history. Registry versions are immutable after publication.
+
+Official MCP Registry publication and GitHub MCP Registry curation are separate
+gates. See
+[`distribution/github-mcp-registry-onboarding.md`](distribution/github-mcp-registry-onboarding.md)
+for the prepared, not-submitted onboarding request.
 
 ## Verification
 
-Before any Registry release, Loppee validates `server.json` with the official
-`mcp-publisher`, calls the live MCP `tools/list` method, verifies the exact
-five-tool catalog and annotations, and exercises the read-only tools. Those
-release checks run from Loppee's private product repository and CI; no backend
-source, credentials, workflows, or operational runbooks are published here.
+Before any future Registry release or downstream directory submission, Loppee
+validates `server.json` with the official `mcp-publisher`; checks the live MCP
+initialize capabilities, `tools/list`, `resources/list`, and `prompts/list`;
+verifies the exact five-tool catalog and annotations with no resource or prompt
+capability; and exercises the read-only tools. Those release checks run from
+Loppee's private product repository and CI; no backend source, credentials,
+workflows, or operational runbooks are published here.
+
+The `0.1.3` production canary completed at `2026-08-24T18:36:20Z` on build
+`f7fabd81ddde681479a2ff1ac2d3c5e3bf72953c`: exactly five tools were listed,
+resources, resource templates, and prompts were unsupported, all five tool
+calls succeeded, the public-output privacy scan and text/structured-content
+parity checks passed, and anonymous access to the separate `/mcp` surface
+returned `401`.
 
 ## Links
 

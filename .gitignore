@@ -3,3 +3,8 @@
 !README.md
 !SECURITY.md
 !server.json
+!mcp.json
+!.cursor-plugin/
+!.cursor-plugin/plugin.json
+!distribution/
+!distribution/*.md
