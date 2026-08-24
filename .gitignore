@@ -8,3 +8,8 @@
 !.cursor-plugin/plugin.json
 !distribution/
 !distribution/*.md
+!clawhub/
+!clawhub/loppee-discovery/
+!clawhub/loppee-discovery/README.md
+!clawhub/loppee-discovery/plugin.json
+!clawhub/loppee-discovery/mcp.json

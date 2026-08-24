@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "loppee-discovery",
+  "version": "0.1.0",
+  "description": "Public, no-auth access to Loppee's five read-only named-business research tools.",
+  "author": {
+    "name": "Loppee",
+    "url": "https://loppee.com"
+  },
+  "homepage": "https://loppee.com/agents",
+  "repository": "https://github.com/4dwebspro-cell/loppee-mcp",
+  "keywords": [
+    "business",
+    "trust",
+    "reviews",
+    "mcp"
+  ]
+}

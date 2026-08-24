@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "loppee-discovery": {
+      "type": "streamable-http",
+      "url": "https://loppee.com/mcp/discovery"
+    }
+  }
+}
