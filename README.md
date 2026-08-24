@@ -46,6 +46,21 @@ Neither file contains an account, header, credential, key, or local command.
 The Marketplace preflight is in
 [`distribution/cursor-marketplace.md`](distribution/cursor-marketplace.md).
 
+### OpenClaw
+
+The metadata-only Agent Plugins Bundle source is in
+[`clawhub/loppee-discovery`](clawhub/loppee-discovery). It contains no skill,
+runtime code, credential, header, key, customer data, owner tool, write tool,
+or location input.
+
+The current ClawHub CLI incorrectly requires a native
+`openclaw.plugin.json` from compatible bundles. Loppee will preserve the
+narrower Agent Plugins Bundle instead of changing it into a native plugin or
+publishing it as a Skill. The live admission blocker and reproduction are
+tracked in [openclaw/clawhub#3513](https://github.com/openclaw/clawhub/issues/3513#issuecomment-5398799455).
+See [`distribution/openclaw-clawhub.md`](distribution/openclaw-clawhub.md) for
+the verified package boundary and publication gate.
+
 ## Public tool boundary
 
 The endpoint exposes exactly five read-only named-business research tools:
