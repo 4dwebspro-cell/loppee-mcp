@@ -1,0 +1,16 @@
+{
+  "name": "loppee",
+  "version": "0.1.3",
+  "description": "Research named US businesses with public Loppee Trust Cards, reviews, recommendation explanations, and comparisons.",
+  "author": {
+    "name": "Loppee"
+  },
+  "homepage": "https://loppee.com/agents",
+  "repository": "https://github.com/4dwebspro-cell/loppee-mcp",
+  "keywords": [
+    "business",
+    "trust",
+    "reviews",
+    "mcp"
+  ]
+}
