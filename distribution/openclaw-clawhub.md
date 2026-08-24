@@ -41,7 +41,7 @@ status: loaded
 The production endpoint independently passed the `0.1.3` five-tool,
 no-resource/no-prompt, output-privacy, text/structured-content parity, and
 private-surface `401` canaries on build
-`f7fabd81ddde681479a2ff1ac2d3c5e3bf72953c`.
+`e09c360f1d29269a72a1d9e272b1ead29c101c0e`.
 
 ## ClawHub blocker
 

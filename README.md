@@ -114,7 +114,7 @@ Loppee's private product repository and CI; no backend source, credentials,
 workflows, or operational runbooks are published here.
 
 The `0.1.3` production canary completed at `2026-08-24T18:36:20Z` on build
-`f7fabd81ddde681479a2ff1ac2d3c5e3bf72953c`: exactly five tools were listed,
+`e09c360f1d29269a72a1d9e272b1ead29c101c0e`: exactly five tools were listed,
 resources, resource templates, and prompts were unsupported, all five tool
 calls succeeded, the public-output privacy scan and text/structured-content
 parity checks passed, and anonymous access to the separate `/mcp` surface
