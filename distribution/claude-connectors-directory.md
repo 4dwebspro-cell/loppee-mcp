@@ -1,7 +1,16 @@
 # Claude Connectors Directory packet
 
-Status: candidate only. No custom connector has been added through this file,
-and no directory submission or publication has occurred.
+Status: the signed-in custom-connector canary is complete; directory submission
+and publication have not occurred. On 2026-08-28 at 22:44 UTC, a personal
+Claude account showed the connected remote as
+`https://loppee.com/mcp/discovery` with exactly five tools, all grouped under
+`Read-only tools`, and no authentication prompt. The same check also confirmed
+that this personal-plan account is not an eligible Team or Enterprise
+organization for a Connectors Directory submission.
+
+The canary ran against production build
+`de1a33de635601e3b7851ebb622201d381c0ecd9`. A future directory submission must
+repeat it against the exact then-current review candidate.
 
 ## Custom-connector canary
 
