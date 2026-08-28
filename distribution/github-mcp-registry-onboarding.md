@@ -1,7 +1,10 @@
 # GitHub MCP Registry onboarding packet
 
-Status: prepared only. No GitHub discussion, issue, email, submission, or
-publication has occurred.
+Status: onboarding request submitted to GitHub's public registry discussion on
+2026-08-28. GitHub has not yet curated or published a Loppee registry entry.
+
+Public request:
+https://github.com/github/github-mcp-server/discussions/1257#discussioncomment-18194044
 
 GitHub's registry at `github.com/mcp` is a curated downstream catalog, separate
 from the Official MCP Registry at `registry.modelcontextprotocol.io`. Publishing
@@ -24,11 +27,13 @@ gate has passed on production build
 five tools and no resources or prompts; all five calls succeeded; and the
 privacy and text/structured-content parity checks passed.
 
-The current observable request venue is GitHub Discussion
-`github/github-mcp-server#1257`: GitHub staff used it to clarify the manual
-onboarding model, and maintainers continued posting onboarding requests there
-through August 2026. GitHub does not document that discussion as a durable
-self-serve intake form, so confirm it remains the accepted venue before posting.
+The onboarding request was posted to GitHub Discussion
+`github/github-mcp-server#1257`, the active public venue where GitHub staff
+clarified the manual-onboarding model and maintainers continued posting requests
+through August 2026. The request includes the Official Registry identity,
+endpoint, public metadata repository, exact five-tool boundary, annotations,
+and a fresh production verification against build
+`de1a33de635601e3b7851ebb622201d381c0ecd9`.
 
 ## Evidence checklist
 
@@ -63,7 +68,7 @@ curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=com.loppee%2F
 curl "https://api.mcp.github.com/v0.1/servers?search=com.loppee%2Floppee"
 ```
 
-## Prepared request
+## Submitted request
 
 Title:
 
@@ -113,11 +118,10 @@ validation evidence.
 
 ## External gate
 
-GitHub documents the catalog as curated but does not publish a self-serve
-onboarding form or objective acceptance criteria. Confirm Discussion `#1257`
-remains GitHub's accepted request venue immediately before posting, and do not
-imply inclusion until the GitHub API and `github.com/mcp` listing both show
-Loppee.
+GitHub documents the catalog as curated but does not publish objective
+acceptance criteria. The request is submitted, but submission is not inclusion.
+Do not imply inclusion until the GitHub Registry API and `github.com/mcp`
+listing both show Loppee.
 
 Current official references:
 
