@@ -32,15 +32,18 @@ The signed-in tester must review and confirm the prefilled values. Then verify:
 
 | Tool | Canary | Expected result |
 | --- | --- | --- |
-| `lookup_business` | Look up `Elite AC`. | A successful named-business result with exact publication/Registry disclosures and no location request. |
-| `get_trust_card` | Read `biz_elite_ac_llc_jacksonville_fl`. | A successful public Trust Card. |
-| `get_business_reviews` | Read page 1, limit 5, for `biz_elite_ac_llc_jacksonville_fl`. | A successful paginated public-review result. |
-| `explain_recommendation` | Explain `biz_elite_ac_llc_jacksonville_fl`. | A successful published basis with `commercial_influence: none`. |
-| `compare_businesses` | Compare `biz_elite_ac_llc_jacksonville_fl` and `loppee_canary_missing`. | A successful response that compares the published record and reports the unknown id as unresolved rather than fabricating it. |
+| `lookup_business` | Look up `Walmart` with limit 2. | Successful public Registry matches with exact unclaimed disclosures and no location request. |
+| `get_trust_card` | Read the first `listing_id` returned by the lookup. | A successful public Registry Trust Card that remains explicitly unclaimed. |
+| `get_business_reviews` | Read page 1, limit 5, for the same `listing_id`. | A successful paginated public-review result that does not claim or verify the record. |
+| `explain_recommendation` | Explain the same unclaimed `listing_id`. | The explicit `recommendation_explanation_not_found` error; no recommendation basis is fabricated for an unclaimed record. |
+| `compare_businesses` | Compare the first two unclaimed `listing_id` values. | A successful neutral response that reports both ids as unresolved rather than fabricating a published comparison. |
 
-A meaningful two-published-business comparison also requires a second live
-published Loppee business. Until one exists, record that limitation rather than
-inventing a fixture or changing production data for review.
+These canaries exercise all five tools and the public Registry fail-closed
+boundary without using a customer business as review material. A successful
+`explain_recommendation` result and a meaningful comparison still require a
+neutral, published Loppee review fixture. Until one exists, record that
+limitation rather than using a customer business, inventing evidence, or
+changing production data for directory review.
 
 ## Submission copy
 
