@@ -99,9 +99,10 @@ it as the only active version, with the `/mcp/discovery` remote, published at
 deprecated history. Registry versions are immutable after publication.
 
 Official MCP Registry publication and GitHub MCP Registry curation are separate
-gates. See
+gates. Loppee's GitHub Registry onboarding request was submitted on 2026-08-28;
+submission is not inclusion. See
 [`distribution/github-mcp-registry-onboarding.md`](distribution/github-mcp-registry-onboarding.md)
-for the prepared, not-submitted onboarding request.
+for the public request and the remaining verification gate.
 
 ## Verification
 
